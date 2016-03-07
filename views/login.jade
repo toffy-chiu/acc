@@ -1,0 +1,60 @@
+doctype html
+html.no-js
+    head
+        include ./layouts/head
+        link(rel="stylesheet",href="css/login.css")
+    body.login-layout
+        .main-container.container-fluid
+            .main-content
+                .row-fluid
+                    .span12
+                        .login-container
+                            .row-fluid
+                                .center
+                                    h1
+                                        i.icon-leaf.green
+                                        span.red  Acc
+                                        span.white  Application
+                                    h4.blue &copy; Company Name
+                            .space-6
+                            .row-fluid
+                                .position-relative
+                                    #login-box.login-box.visible.widget-box.no-border
+                                        .widget-body
+                                            .widget-main
+                                                h4.header.blue.lighter.bigger
+                                                    i.icon-coffee.green
+                                                    |  Please Enter Your Information
+                                                .space-6
+                                                form
+                                                    fieldset
+                                                        label
+                                                            span.block.input-icon.input-icon-right
+                                                                input(type="text",placeholder="账号")/.span12
+                                                                i.icon-user
+                                                        label
+                                                            span.block.input-icon.input-icon-right
+                                                                input(type="password",placeholder="密码")/.span12
+                                                                i.icon-lock
+                                                        .space
+                                                        .clearfix
+                                                            label.inline
+                                                                input(type="checkbox")/
+                                                                span.lbl  记住我
+                                                            button(type="button")#login.width-35.pull-right.btn.btn-small.btn-primary
+                                                                i.icon-key
+                                                                |  登录
+                                                        .space-4
+                                        .toolbar.clearfix
+                                            div
+                                                //-
+                                                    a.forgot-password-link
+                                                        i.icon-arrow-left
+                                                        |  忘记密码
+                                            div
+                                                a(href="register.html").user-signup-link
+                                                    | 注册
+                                                    i.icon-arrow-right
+        script(src="js/jquery.min.js")
+        script
+            include ../src/js/login.js

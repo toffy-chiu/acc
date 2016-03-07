@@ -1,0 +1,25 @@
+mixin sidebar(name)
+    #sidebar.sidebar
+        ul.nav.nav-list
+            li.active
+                a(href="index.html")
+                    i.icon-dashboard
+                    span.menu-text 首页
+            li
+                a(href="#").dropdown-toggle
+                    i.icon-desktop
+                    span.menu-text 更多
+                    b.arrow.icon-angle-down
+                ul.submenu
+                    li
+                        a(href="index.html")
+                            i.icon-double-angle-right
+                            |  顶替使用者
+                    li
+                        a(href="index.html")
+                            i.icon-double-angle-right
+                            |  顶替使用者
+            li
+                a(href="index.html")
+                    i.icon-text-width
+                    span.menu-text 其他#{name}

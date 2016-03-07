@@ -1,0 +1,13 @@
+- var test="sdfsdf";
+extends ./layouts/main.jade
+
+block style
+    link(rel="stylesheet",href="css/index.css")
+
+block script
+    script
+        include ../src/js/index.js
+
+block content
+    h1 hello toffy#{test}
+    h3= test

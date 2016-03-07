@@ -1,0 +1,19 @@
+doctype html
+html.no-js
+    head
+        include head
+
+        block style
+    body
+        include navbar
+        .main-container.container-fluid
+            include sidebar
+            +sidebar('saaaa')
+            .main-content
+                include breadcrumbs
+                .page-content
+                    block content
+
+        script(src="js/jquery.min.js")
+        script(src="js/bootstrap.min.js")
+        block script
