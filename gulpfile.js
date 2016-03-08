@@ -4,6 +4,7 @@ var uglify=require('gulp-uglify');
 var sass=require('gulp-sass');
 var rename=require('gulp-rename');
 var del=require('del');
+var replaceFilename=require('gulp-toffy-replace');
 
 gulp.task('vendor', function(){
     gulp.src('./vendor/js/*')
@@ -25,6 +26,7 @@ gulp.task('image', function(){
 
 gulp.task('template', function(){
     gulp.src('./views/*.jade')
+        .pipe(replaceFilename({ext:'.jade'}))
         .pipe(jade({pretty:true,locals:{test:'sdfsdfwewe'}}))
         .pipe(gulp.dest('./dist/'))
     ;

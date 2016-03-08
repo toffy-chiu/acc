@@ -2,18 +2,19 @@ doctype html
 html.no-js
     head
         include head
-
         block style
     body
         include navbar
         .main-container.container-fluid
             include sidebar
-            +sidebar('saaaa')
+            block sidebar
             .main-content
                 include breadcrumbs
                 .page-content
                     block content
-
         script(src="js/jquery.min.js")
         script(src="js/bootstrap.min.js")
+        //- 侧边栏脚本
+        script
+            include ../../src/js/sidebar.js
         block script
