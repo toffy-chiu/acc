@@ -5,12 +5,12 @@ mixin sidebar(name)
                 a(href="order.html")
                     i.icon-dashboard
                     span.menu-text order
-            li.open(class={active:~['provider_info','provider_verify'].indexOf(name)})
+            li(class={active:~['provider_info','provider_verify'].indexOf(name)})
                 a(href="#").dropdown-toggle
                     i.icon-desktop
                     span.menu-text provider
                     b.arrow.icon-angle-down
-                ul.submenu(style="display:block")
+                ul.submenu
                     li(class={active:name=='provider_info'})
                         a(href="index.html")
                             i.icon-double-angle-right
@@ -21,12 +21,12 @@ mixin sidebar(name)
                             i.icon-double-angle-right
                             i.icon-dashboard
                             |  provider verify
-            li.open(class={active:~['user_info','user_verify','credit'].indexOf(name)})
+            li(class={active:~['user_info','user_verify','credit'].indexOf(name)})
                 a(href="#").dropdown-toggle
                     i.icon-text-width
                     span.menu-text user
                     b.arrow.icon-angle-down
-                ul.submenu(style="display:block")
+                ul.submenu
                     li(class={active:name=='user_info'})
                         a(href="index.html")
                             i.icon-double-angle-right
