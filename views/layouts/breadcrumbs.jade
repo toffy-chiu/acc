@@ -1,8 +1,21 @@
-#breadcrumbs.breadcrumbs
-    ul.breadcrumb
-        li
-            i.icon-home.home-icon
-            a(href="index.html") 首页
-            span.divider
-                i.icon-angle-right.arrow-icon
-        li.active 页面
+mixin breadcrumbs(list)
+    #breadcrumbs.breadcrumbs
+        ul.breadcrumb
+            if list.length>0
+                li
+                    i.icon-home.home-icon
+                    a(href="index.html") 首页
+                    span.divider
+                        i.icon-angle-right.arrow-icon
+            else
+                li.active
+                    i.icon-home.home-icon
+                    |  首页
+            each o, i in list
+                if i<list.length-1
+                    li
+                        a(href=o.url)=o.name
+                        span.divider
+                            i.icon-angle-right.arrow-icon
+                else
+                    li.active=o.name
