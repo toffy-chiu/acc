@@ -27,7 +27,7 @@ gulp.task('image', function(){
 gulp.task('template', function(){
     gulp.src('./views/*.jade')
         .pipe(replaceFilename({ext:'.jade'}))
-        .pipe(jade({pretty:true,locals:{test:'sdfsdfwewe'}}))
+        .pipe(jade())
         .pipe(gulp.dest('./dist/'))
     ;
 });

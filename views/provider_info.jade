@@ -3,13 +3,12 @@ extends ./layouts/main.jade
 block sidebar
     +sidebar('__FILENAME__')
 
-//block style
-//    link(rel="stylesheet",href="css/__FILENAME__.css")
+block style
+    link(rel="stylesheet",href="css/__FILENAME__.css")
 
 block script
     script
         include ../src/js/__FILENAME__.js
 block content
-    h1
-        i.icon-user
-        |  Welcome to ACC System!
+    h1 hello toffy#{test}
+    h3= test1

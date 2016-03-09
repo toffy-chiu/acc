@@ -5,44 +5,44 @@ mixin sidebar(name)
                 a(href="order.html")
                     i.icon-dashboard
                     span.menu-text order
-            li(class={active:~['provider_info','provider_verify'].indexOf(name)})
+            li(class={'active open':~['provider_info','provider_verify'].indexOf(name)})
                 a(href="#").dropdown-toggle
                     i.icon-desktop
                     span.menu-text provider
                     b.arrow.icon-angle-down
                 ul.submenu
                     li(class={active:name=='provider_info'})
-                        a(href="index.html")
+                        a(href="provider_info.html")
                             i.icon-double-angle-right
                             i.icon-dashboard
                             |  provider info
                     li(class={active:name=='provider_verify'})
-                        a(href="index.html")
+                        a(href="provider_verify.html")
                             i.icon-double-angle-right
                             i.icon-dashboard
                             |  provider verify
-            li(class={active:~['user_info','user_verify','credit'].indexOf(name)})
+            li(class={'active open':~['user_info','user_verify','credit'].indexOf(name)})
                 a(href="#").dropdown-toggle
                     i.icon-text-width
                     span.menu-text user
                     b.arrow.icon-angle-down
                 ul.submenu
                     li(class={active:name=='user_info'})
-                        a(href="index.html")
+                        a(href="user_info.html")
                             i.icon-double-angle-right
                             i.icon-dashboard
                             |  user info
                     li(class={active:name=='user_verify'})
-                        a(href="index.html")
+                        a(href="user_verify.html")
                             i.icon-double-angle-right
                             i.icon-dashboard
                             |  user verify
                     li(class={active:name=='credit'})
-                        a(href="index.html")
+                        a(href="credit.html")
                             i.icon-double-angle-right
                             i.icon-dashboard
                             |  credit
             li(class={active:name=='knowledge'})
-                a(href="index.html")
+                a(href="knowledge.html")
                     i.icon-dashboard
                     span.menu-text knowledge
