@@ -1,0 +1,29 @@
+header.am-topbar.am-topbar-inverse.am-topbar-fixed-top
+    .am-container
+        h1.am-topbar-brand
+            a
+                i.am-icon-leaf
+                |  ACC
+        button.am-topbar-btn.am-topbar-toggle.am-btn.am-btn-sm.am-btn-primary.am-show-sm-only(data-am-collapse="{target:'#topbarCollapse'}")
+            span.am-sr-only 导航切换
+            span.am-icon-bars
+        #topbarCollapse.am-collapse.am-topbar-collapse
+            ul.am-nav.am-nav-pills.am-topbar-nav
+                li.am-active
+                    a 首页
+                li
+                    a 项目
+                li.am-dropdown(data-am-dropdown)
+                    a.am-dropdown-toggle(data-am-dropdown-toggle,href="javascript:;") 下拉
+                        span.am-icon-caret-down(style="margin-left:3px")
+                    ul.am-dropdown-content
+                        li
+                            a 桍奇才桍厅埼
+                        li
+                            a 桍奇才桍厅埼
+                        li
+                            a 桍奇才桍厅埼
+            .am-topbar-right
+                a.am-btn.am-btn-primary.am-topbar-btn.am-btn-sm(href="regester.html") 注册
+            .am-topbar-right
+                a.am-btn.am-btn-primary.am-topbar-btn.am-btn-sm(href="login.html") 登录

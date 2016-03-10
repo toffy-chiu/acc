@@ -1,0 +1,18 @@
+doctype html
+html.no-js
+    head
+        include head
+        block style
+    body
+        include navbar
+        .am-container
+            block content
+        script(src="js/jquery.min.js")
+        script(src="js/amazeui.min.js")
+        //- 侧边栏脚本
+        script
+            include ../../src/js/layouts/sidebar.js
+        //- 顶部栏脚本
+        script
+            include ../../src/js/layouts/navbar.js
+        block script

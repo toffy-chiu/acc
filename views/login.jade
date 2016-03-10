@@ -1,0 +1,36 @@
+doctype html
+html.no-js
+    head
+        include ./layouts/head
+        link(rel="stylesheet",href="css/login.css")
+    body
+        .am-container
+            .am-text-center
+                h1
+                    i.am-icon-leaf.am-text-success
+                    span.am-text-danger  ACC
+                    span  Application
+            form.am-form
+                fieldset
+                    legend.am-text-center Please Enter Your Information
+                    .am-input-group.am-form-group
+                        label.am-input-group-label(for="uid")
+                            i.am-icon-user
+                        input#uid.am-form-field(type="text",placeholder="账号")
+                    .am-input-group
+                        label.am-input-group-label(for="pwd")
+                            i.am-icon-lock
+                        input#pwd.am-form-field(type="password",placeholder="密码")
+                    .am-form-group
+                        .am-checkbox
+                            label
+                                input(type="checkbox")
+                                |  自动登录
+                            a.am-fr(href="register.html") 注册
+                    .am-form-group
+                        a#login.am-btn.am-btn-primary.am-u-md-2.am-u-md-centered.am-block(href="index.html")
+                            i.am-icon-check
+                            |  登录
+        script(src="js/jquery.min.js")
+        script
+            include ../src/js/login.js
