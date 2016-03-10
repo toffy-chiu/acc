@@ -1,7 +1,7 @@
 extends ./layouts/main.jade
 
 block breadcrumbs
-    +breadcrumbs([{name:'__FILENAME__'])
+    +breadcrumbs([{name:'__FILENAME__'}])
 
 block sidebar
     +sidebar('__FILENAME__')
@@ -13,5 +13,21 @@ block script
     script(src="js/__FILENAME__.js")
 
 block content
-    h1 hello toffy#{test}
-    h3= test1
+    table.table.table-striped.table-bordered.table-hover
+        thead
+            tr
+                th order id
+                th user
+                th provider
+                th create time
+                th
+        tbody
+            tr
+                td 123456
+                td toffy
+                td car shop
+                td 2016-03-09 12:12:43
+                td
+                    .action-buttons
+                        a.blue
+                            i.icon-zoom-in.bigger-130
