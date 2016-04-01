@@ -1,0 +1,37 @@
+extends ./layouts/main.jade
+
+block breadcrumbs
+    +breadcrumbs([{name:'店主信息',url:'provider_info.html'},{name:'编辑信息'}])
+
+block sidebar
+    +sidebar('provider_info')
+
+block style
+    link(rel="stylesheet",href="css/__FILENAME__.css")
+
+block script
+    script(src="js/__FILENAME__.js")
+
+block content
+    #formEdit.form-horizontal
+    script#tempEdit(type="text/html")
+        .control-group
+            label.control-label(for="name") 店主名
+            .controls
+                input#name(type="text")
+        .control-group
+            label.control-label(for="desc") 简介
+            .controls
+                textarea#desc(rows="3")
+        .control-group
+            label.control-label(for="addr") 地址
+            .controls
+                input#addr(type="text")
+        .control-group
+            label.control-label(for="phone") 联系方式
+            .controls
+                input#phone(type="text")
+        .form-actions
+            button.btn.btn-info(type="button")
+                i.icon-ok.bigger-110
+                |  提交

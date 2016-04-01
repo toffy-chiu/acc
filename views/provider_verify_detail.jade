@@ -1,0 +1,61 @@
+extends ./layouts/main.jade
+
+block breadcrumbs
+    +breadcrumbs([{name:'资料审核',url:'provider_verify.html'},{name:'审核详情'}])
+
+block sidebar
+    +sidebar('provider_verify')
+
+block style
+    link(rel="stylesheet",href="css/__FILENAME__.css")
+
+block script
+    script(src="js/__FILENAME__.js")
+
+block content
+    #formEdit.form-horizontal
+    script#tempEdit(type="text/html")
+        .control-group
+            label.control-label 店主名
+            .controls
+                span.text xxx
+        .control-group
+            label.control-label 简介
+            .controls
+                span.text xxx
+        .control-group
+            label.control-label 联系方式
+            .controls
+                span.text xxx
+        .control-group
+            label.control-label 服务项
+            .controls
+                span.text xxx
+        .control-group
+            label.control-label 提交时间
+            .controls
+                span.text xxx
+        .control-group
+            label.control-label 证件扫描
+            .controls
+                img(src="")
+        .control-group
+            label.control-label 店面照
+            .controls
+                img(src="")
+        .form-actions
+            button.btn.btn-info(type="button")
+                i.icon-ok.bigger-110
+                | 通过
+            button#reject.btn.btn-danger(type="button")
+                i.icon-undo.bigger-110
+                | 驳回
+    #modalReject.modal.fade.hide
+    script#tempReject(type="text/html")
+        .modal-header
+            a.close(data-dismiss="modal") ×
+            h3 请填写驳回原因
+        .modal-body
+            textarea.input-block-level(placeholder="驳回原因")
+        .modal-footer
+            a.btn.btn-primary 确定

@@ -1,0 +1,53 @@
+extends ./layouts/main.jade
+
+block breadcrumbs
+    +breadcrumbs([{name:'订单信息',url:'order.html'},{name:'订单详情'}])
+
+block sidebar
+    +sidebar('order')
+
+block style
+    link(rel="stylesheet",href="css/__FILENAME__.css")
+
+block script
+    script(src="js/__FILENAME__.js")
+
+block content
+    #profile.profile-user-info.profile-user-info-striped
+    script#tempProfile(type="text/html")
+        .profile-info-row
+            .profile-info-name 订单号
+            .profile-info-value xxx
+        .profile-info-row
+            .profile-info-name 状态
+            .profile-info-value xxx
+        .profile-info-row
+            .profile-info-name 车主
+            .profile-info-value xxx
+        .profile-info-row
+            .profile-info-name 车主联系方式
+            .profile-info-value xxx
+        .profile-info-row
+            .profile-info-name 店主
+            .profile-info-value xxx
+        .profile-info-row
+            .profile-info-name 店主联系方式
+            .profile-info-value xxx
+        .profile-info-row
+            .profile-info-name 问题描述
+            .profile-info-value xxx
+        .profile-info-row
+            .profile-info-name 创建时间
+            .profile-info-value xxx
+        .profile-info-row
+            .profile-info-name 修改方案
+            .profile-info-value xxx
+        .profile-info-row
+            .profile-info-name 估价
+            .profile-info-value xxx
+        .profile-info-row
+            .profile-info-name 实价
+            .profile-info-value xxx
+        .profile-info-row
+            .profile-info-name 用户评价
+            .profile-info-value xxx

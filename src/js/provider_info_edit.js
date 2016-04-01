@@ -4,4 +4,4 @@ var list=[
     {id:3, user:'toffy3', provider:'car shop', createTime:'2016-03-30 16:08:00'}
 ];
 
-$('#widget').html(template('tempWidget', {list:list}));
+$('#formEdit').html(template('tempEdit', {}));

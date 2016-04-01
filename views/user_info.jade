@@ -1,7 +1,7 @@
 extends ./layouts/main.jade
 
 block breadcrumbs
-    +breadcrumbs([{name:'店主信息'}])
+    +breadcrumbs([{name:'车主信息'}])
 
 block sidebar
     +sidebar('__FILENAME__')
@@ -18,28 +18,25 @@ block content
         .widget-header.header-color-blue
             h5.bigger.lighter
                 i.icon-table
-                |  店主信息列表
+                |  车主信息列表
         .widget-body
             .widget-main.no-padding
                 table.table.table-striped.table-bordered.table-hover
                     thead
                         tr
                             th ID
-                            th 店主
-                            th 简介
-                            th 地址
-                            th 联系方式
-                            th
+                            th 车主
+                            th 手机号码
+                            th 性别
+                            th 城市
+                            th 积分
                     tbody
                         | {{each list as o}}
                         tr
                             td {{o.id}}
                             td {{o.name}}
-                            td {{o.desc}}
-                            td {{o.addr}}
                             td {{o.phone}}
-                            td
-                                .action-buttons
-                                    a.green(href="provider_info_edit.html?id={{o.id}}")
-                                        i.icon-pencil.bigger-130
+                            td {{o.sex}}
+                            td {{o.city}}
+                            td {{o.credit}}
                         | {{/each}}

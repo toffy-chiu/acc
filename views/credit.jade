@@ -1,0 +1,21 @@
+extends ./layouts/main.jade
+
+block breadcrumbs
+    +breadcrumbs([{name:'积分设置'}])
+
+block sidebar
+    +sidebar('__FILENAME__')
+
+block style
+    link(rel="stylesheet",href="css/__FILENAME__.css")
+
+block script
+    script(src="js/__FILENAME__.js")
+
+block content
+    form.form-inline
+        | 每次分享成功所得积分：
+        input.input-small(type="text")
+        button.btn.btn-info.btn-small
+            i.icon-save.bigger-110
+            | 保存

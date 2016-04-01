@@ -1,7 +1,7 @@
 extends ./layouts/main.jade
 
 block breadcrumbs
-    +breadcrumbs([{name:'__FILENAME__'}])
+    +breadcrumbs([{name:'订单信息'}])
 
 block sidebar
     +sidebar('__FILENAME__')
@@ -13,21 +13,31 @@ block script
     script(src="js/__FILENAME__.js")
 
 block content
-    table.table.table-striped.table-bordered.table-hover
-        thead
-            tr
-                th order id
-                th user
-                th provider
-                th create time
-                th
-        tbody
-            tr
-                td 123456
-                td toffy
-                td car shop
-                td 2016-03-09 12:12:43
-                td
-                    .action-buttons
-                        a.blue
-                            i.icon-zoom-in.bigger-130
+    #widget.widget-box
+    script#tempWidget(type="text/html")
+        .widget-header.header-color-blue
+            h5.bigger.lighter
+                i.icon-table
+                |  订单信息列表
+        .widget-body
+            .widget-main.no-padding
+                table.table.table-striped.table-bordered.table-hover
+                    thead
+                        tr
+                            th 订单号
+                            th 车主
+                            th 店主
+                            th 创建时间
+                            th
+                    tbody
+                        | {{each list as o}}
+                        tr
+                            td {{o.id}}
+                            td {{o.user}}
+                            td {{o.provider}}
+                            td {{o.createTime}}
+                            td
+                                .action-buttons
+                                    a.blue(href="order_view.html?id={{o.id}}")
+                                        i.icon-zoom-in.bigger-130
+                        | {{/each}}

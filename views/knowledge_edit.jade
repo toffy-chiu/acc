@@ -1,0 +1,23 @@
+extends ./layouts/main.jade
+
+block breadcrumbs
+    +breadcrumbs([{name:'知识常识',url:'knowledge.html'},{name:'编辑信息'}])
+
+block sidebar
+    +sidebar('knowledge')
+
+block style
+    link(rel="stylesheet",href="css/__FILENAME__.css")
+
+block script
+    script(src="js/__FILENAME__.js")
+
+block content
+    #wrapper
+    script#template(type="text/html")
+        input(type="text", value="{{title}}")
+        textarea.input-block-level(rows="10") {{content}}
+        .form-actions.text-center
+            button.btn.btn-info(type="button")
+                i.icon-ok.bigger-110
+                | 保存

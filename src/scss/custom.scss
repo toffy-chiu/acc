@@ -5,3 +5,11 @@ body{
 a{
   cursor: pointer;
 }
+.controls .text {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+}
+.form-actions>.btn{
+  margin-right: 5px;
+}
